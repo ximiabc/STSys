@@ -9,10 +9,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>STSys index page</title>
+    <title>Student index page</title>
   </head>
   
   <body>
-	<jsp:forward page="public"/>
+    This is my JSP page. <br>
   </body>
 </html>
