@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.lzf.stsys.pro.entity.publics.QuestionSelectSingle" table="sts_q_selectsingle">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+	
+		<property name="title" type="string"></property>
+        <property name="context" type="string"></property>
+        <many-to-one name="types" cascade="all"></many-to-one>
+        <property name="scoreMax" type="integer"></property>
+        <property name="scores" type="integer"></property>
+        <!-- 单选相关 -->
+        <property name="itemA" type="string"></property>
+        <property name="itemB" type="string"></property>
+        <property name="itemC" type="string"></property>
+        <property name="itemD" type="string"></property>
+        <property name="result" type="integer"></property>
+    </class>
+</hibernate-mapping>

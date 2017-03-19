@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 新闻中心 -->
+	<package name="student" extends="struts-default" namespace="/">
+		<action name="student*" class="cn.lzf.stsys.pro.action.student.StudentAction" method="{1}">
+			<!-- 默认页 -->
+			<result name="index">/WEB-INF/view/student/index.jsp</result>
+			
+			<!-- 考试安排相关 -->
+			<result name="listexam">/WEB-INF/view/student/exam_list_message.jsp</result>
+			<result name="listhistory">/WEB-INF/view/student/exam_list_history.jsp</result>
+			
+			<!-- 模拟考试相关 -->
+			<result name="testexam">/WEB-INF/view/student/test_list_message.jsp</result>
+			<result name="testhistory">/WEB-INF/view/student/test_list_history.jsp</result>
+			
+			<!-- 个人信息相关 -->
+			<result name="listself">/WEB-INF/view/student/self_list_message.jsp</result>
+			<result name="updateself">/WEB-INF/view/student/self_update_message.jsp</result>
+			
+		</action>
+	</package>
+
+</struts>

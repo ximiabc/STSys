@@ -1,22 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" 
+<web-app version="3.0" 
 	xmlns="http://java.sun.com/xml/ns/javaee" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-  <display-name>STSys</display-name>
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name>STSys</display-name>	
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>/index.jsp</welcome-file>
   </welcome-file-list>
   
-  <!-- public view config  -->
-  <servlet>
-  	<servlet-name>public_index</servlet-name>
-  	<servlet-class>cn.lzf.stsys.pro.servlet.PublicServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>public_index</servlet-name>
-  	<url-pattern>/public</url-pattern>
-  </servlet-mapping>
+  <!--程序启动监听 -->
+	<!-- <listener>
+		<listener-class>com.softwareexper.tools.webListener</listener-class>
+	</listener> -->
+	<!--访问量监听 -->
+	<!-- <listener>
+		<listener-class>com.softwareexper.tools.useListener</listener-class>
+	</listener> -->
+   
+   <!-- Spring加载 -->
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+   <param-name>contextConfigLocation</param-name>
+   <param-value>classpath:applicationContext.xml</param-value> 
+  </context-param>
   
+  <!-- 解决懒加载异常的拦截器 -->
+    <filter>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<url-pattern>*</url-pattern>
+	</filter-mapping>
+
+  <!-- struts2的主要拦截器 -->
+  <filter>
+  <filter-name>struts2</filter-name>
+  <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <!-- <filter-mapping>
+  <filter-name>struts2</filter-name>
+  <url-pattern>*.action</url-pattern>
+  </filter-mapping> -->
+  <filter-mapping>
+  <filter-name>struts2</filter-name>
+  <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ 
+  <!-- 清除缓存监听防止内存泄漏 -->
+  <listener>
+	 <listener-class>org.springframework.web.util.IntrospectorCleanupListener
+	 </listener-class> 
+  </listener>
+  
+  <!-- 字符编码过滤器 -->
+  <filter>
+  	<filter-name>encoding</filter-name>
+  	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+  	<init-param>
+  	  <param-name>encoding</param-name>
+  	  <param-value>UTF-8</param-value>
+  	</init-param>
+  	<init-param>
+  	<param-name>forceEncoding</param-name>
+  	<param-value>true</param-value>
+  	</init-param>
+  </filter>
+  
+  <!-- session超时 -->
+  <session-config>
+	<session-timeout>60</session-timeout>
+  </session-config>
+
 </web-app>

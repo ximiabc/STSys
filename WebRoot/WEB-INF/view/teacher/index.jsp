@@ -4,15 +4,19 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
+<%-- <% 
+	request.getRequestDispatcher(request.getContextPath() + "/viewframe").forward(request, response);
+%> --%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
     
-    <title>Teacher index page</title>
+    <title>考试系统-教师端</title>
   </head>
   
   <body>
-    This is my JSP page. <br>
+    <jsp:forward page="../frame.jsp"></jsp:forward>
   </body>
 </html>
