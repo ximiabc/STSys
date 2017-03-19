@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 新闻中心 -->
+	<package name="teacher" extends="struts-default" namespace="/">
+		<action name="teacher*" class="cn.lzf.stsys.pro.action.teacher.TeacherAction" method="{1}">
+			<result name="index">/WEB-INF/view/teacher/index.jsp</result>
+			
+			<!-- 个人相关 -->
+			<result name="listself">/WEB-INF/view/teacher/self_list_message.jsp</result>
+			<result name="updateself">/WEB-INF/view/teacher/self_update_message.jsp</result>
+			
+			<!-- 班级相关 -->
+			<result name="addclass">/WEB-INF/view/teacher/class_add_message.jsp</result>
+			<result name="listclass">/WEB-INF/view/teacher/class_list_message.jsp</result>
+			<result name="updateclass">/WEB-INF/view/teacher/class_update_message.jsp</result>
+			
+			<!-- 学生相关 -->
+			<result name="addstudent">/WEB-INF/view/teacher/student_add_message.jsp</result>
+			<result name="liststudent">/WEB-INF/view/teacher/student_list_message.jsp</result>
+			<result name="updatestudent">/WEB-INF/view/teacher/student_update_message.jsp</result>
+			
+			<!-- 考试相关 -->
+			<result name="addexam">/WEB-INF/view/teacher/exam_add_message.jsp</result>
+			<result name="listexam">/WEB-INF/view/teacher/exam_list_message.jsp</result>
+			<result name="updateexam">/WEB-INF/view/teacher/exam_update_message.jsp</result>
+			
+			<!-- 题库相关 -->
+			<result name="addentrepot">/WEB-INF/view/teacher/entrepot_add_message.jsp</result>
+			<result name="listentrepot">/WEB-INF/view/teacher/entrepot_list_message.jsp</result>
+			<result name="updateentrepot">/WEB-INF/view/teacher/entrepot_update_message.jsp</result>
+		</action>
+	</package>
+
+</struts>

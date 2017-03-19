@@ -5,3 +5,7 @@ WebRoot/WEB-INF/classes/cn/lzf/stsys/pro/dao/PublicDao.class
 WebRoot/WEB-INF/classes/cn/lzf/stsys/pro/entity/实体
 WebRoot/WEB-INF/classes/cn/lzf/stsys/pro/service/PublicService.class
 WebRoot/WEB-INF/classes/cn/lzf/stsys/pro/servlet/PublicServlet.class
+.classpath
+.settings/org.eclipse.wst.common.component
+.settings/org.eclipse.wst.common.component
+.classpath

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 新闻中心 -->
+	<package name="admin" extends="struts-default" namespace="/">
+		<action name="admin*" class="cn.lzf.stsys.pro.action.admin.AdminAction" method="{1}">
+			<!-- 默认页 -->
+			<result name="index">/WEB-INF/view/admin/index.jsp</result>
+			
+			<!-- 个人相关 -->
+			<result name="listself">/WEB-INF/view/admin/self_list_message.jsp</result>
+			<result name="updateself">/WEB-INF/view/admin/self_update_message.jsp</result>
+			
+			<!-- 教师相关 -->
+			<result name="addteacher">/WEB-INF/view/admin/teacher_add_message.jsp</result>
+			<result name="listteacher">/WEB-INF/view/admin/teacher_list_message.jsp</result>
+			<result name="updateteacher">/WEB-INF/view/admin/teacher_update_message.jsp</result>
+			
+			<!-- 班级相关 -->
+			<result name="addclass">/WEB-INF/view/admin/class_add_message.jsp</result>
+			<result name="listclass">/WEB-INF/view/admin/class_list_message.jsp</result>
+			<result name="updateclass">/WEB-INF/view/admin/class_update_message.jsp</result>
+			
+			<!-- 学生相关 -->
+			<result name="addstudent">/WEB-INF/view/admin/student_add_message.jsp</result>
+			<result name="liststudent">/WEB-INF/view/admin/student_list_message.jsp</result>
+			<result name="updatestudent">/WEB-INF/view/admin/student_update_message.jsp</result>
+			
+			<!-- 考试相关 -->
+			<result name="addexam">/WEB-INF/view/admin/exam_add_message.jsp</result>
+			<result name="listexam">/WEB-INF/view/admin/exam_list_message.jsp</result>
+			<result name="updateexam">/WEB-INF/view/admin/exam_update_message.jsp</result>
+			
+			<!-- 题库相关 -->
+			<result name="addentrepot">/WEB-INF/view/admin/entrepot_add_message.jsp</result>
+			<result name="listentrepot">/WEB-INF/view/admin/entrepot_list_message.jsp</result>
+			<result name="updateentrepot">/WEB-INF/view/admin/entrepot_update_message.jsp</result>
+			
+		</action>
+	
+	</package>
+</struts>
