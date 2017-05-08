@@ -9,7 +9,7 @@
 		<action name="admin*" class="cn.lzf.stsys.pro.action.admin.AdminAction" method="{1}">
 			<!-- 默认页 -->
 			<result name="index">/WEB-INF/view/admin/index.jsp</result>
-			
+			<result name="login">/WEB-INF/view/public/index.jsp</result>
 			<!-- 个人相关 -->
 			<result name="listself">/WEB-INF/view/admin/self_list_message.jsp</result>
 			<result name="updateself">/WEB-INF/view/admin/self_update_message.jsp</result>
@@ -29,6 +29,11 @@
 			<result name="liststudent">/WEB-INF/view/admin/student_list_message.jsp</result>
 			<result name="updatestudent">/WEB-INF/view/admin/student_update_message.jsp</result>
 			
+			<!-- 课程相关 -->
+			<result name="addcourse">/WEB-INF/view/admin/course_add_message.jsp</result>
+			<result name="listcourse">/WEB-INF/view/admin/course_list_message.jsp</result>
+			<result name="updatecourse">/WEB-INF/view/admin/course_update_message.jsp</result>
+			
 			<!-- 考试相关 -->
 			<result name="addexam">/WEB-INF/view/admin/exam_add_message.jsp</result>
 			<result name="listexam">/WEB-INF/view/admin/exam_list_message.jsp</result>
@@ -38,8 +43,25 @@
 			<result name="addentrepot">/WEB-INF/view/admin/entrepot_add_message.jsp</result>
 			<result name="listentrepot">/WEB-INF/view/admin/entrepot_list_message.jsp</result>
 			<result name="updateentrepot">/WEB-INF/view/admin/entrepot_update_message.jsp</result>
-			
 		</action>
-	
+		
+		<!-- 题库相关 ============-->
+		<!-- 关键字 -->
+		<action name="aknow*" class="cn.lzf.stsys.pro.action.publics.KnowAction" method="{1}">
+			<result name="add">/WEB-INF/view/public/know_add_message.jsp</result>
+			<result name="list">/WEB-INF/view/public/know_list_message.jsp</result>
+			<result name="listbyid">/WEB-INF/view/public/know_listbyid_message.jsp</result>
+			<result name="update">/WEB-INF/view/public/know_update_message.jsp</result>
+		</action>
+		<!-- 知识点类型 -->
+		<action name="atype*" class="cn.lzf.stsys.pro.action.publics.KnowTypeAction" method="{1}">
+			<result name="add">/WEB-INF/view/public/knowtype_add_message.jsp</result>
+			<result name="list">/WEB-INF/view/public/knowtype_list_message.jsp</result>
+			<result name="update">/WEB-INF/view/public/knowtype_update_message.jsp</result>
+		</action>
+		<action name="qtlist" class="cn.lzf.stsys.pro.action.publics.QuestionTypeAction">
+			<result name="list">/WEB-INF/view/public/questions_list_message.jsp</result>
+		</action>
+		
 	</package>
 </struts>

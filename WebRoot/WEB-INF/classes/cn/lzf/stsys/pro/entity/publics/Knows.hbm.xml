@@ -10,5 +10,7 @@
         </id>
 		
 		<property name="name" type="string"></property>
+		<many-to-one name="type" class="cn.lzf.stsys.pro.entity.publics.KnowType" column="know_id">
+		</many-to-one>
     </class>
 </hibernate-mapping>

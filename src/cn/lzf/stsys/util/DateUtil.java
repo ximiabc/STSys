@@ -14,8 +14,8 @@ public class DateUtil {
 	 * 唯一标识码
 	 * @return
 	 */
-	public static String getDateUUID(){
-		Format format = new SimpleDateFormat("mmssSSS");
+	public static String getUUID(){
+		Format format = new SimpleDateFormat("yyyyMMddHHmmSSSS");
 		return format.format(new Date());
 	}
 	/**

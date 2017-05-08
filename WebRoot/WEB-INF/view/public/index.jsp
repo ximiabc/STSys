@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -82,14 +83,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="tab-pane fade" id="admin">
 				<center>
 				<!--管理-->
-			    <form action="adminindex" method="post">
-			    	<strong>账号</strong><input type="text" name="name" class="form-control" placeholder="请输入学号"><br>
+			    <form action="adminlogin" method="post">
+			    	<strong>账号</strong><input type="text" name="account" class="form-control" placeholder="请输入学号"><br>
 			    	<strong>密码</strong><input type="password" name="pass" class="form-control" placeholder="请输入密码"><br>
 				    <input type="submit" value="登录" class="btn btn-primary"/>
 			    </form>
 			    </center>
 			</div>
 		</div>
+		<label style="color: red;"><s:fielderror></s:fielderror></label>
 	</div>
 	<script>
 		$(function () {

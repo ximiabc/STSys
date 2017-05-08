@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.lzf.stsys.pro.entity.publics.QuestionJudge" table="sts_q_judge">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+	
+		<property name="title" type="string"></property>
+        <property name="context" type="string"></property>
+        <many-to-one name="types" cascade="all"></many-to-one>
+        <property name="scoreMax" type="integer"></property>
+        <property name="scores" type="integer"></property>
+        <property name="stars" type="integer"></property>
+        <!-- 判断相关 -->
+        <property name="result" type="integer"></property>
+         <!-- 关联多个试题 -->
+        <set name="lists">
+        	<key column="judge_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionList"/>
+        </set>
+        
+        <!-- 关联课程 -->
+        <many-to-one name="course" class="cn.lzf.stsys.pro.entity.publics.Course" column="judge_id"></many-to-one>
+    </class>
+</hibernate-mapping>

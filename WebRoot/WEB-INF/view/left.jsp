@@ -79,7 +79,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</h4>
 			</div>
 			<div id="collapse6" class="panel-collapse collapse">
-				<div class="panel-body text-center"><a href="studentlistself" target="main">查看信息</a></div>
+				<div class="panel-body text-center"><a href="studentlistself" target="main">我的信息</a></div>
 				<div class="panel-body text-center"><a href="studentupdateself" target="main">修改密码</a></div>
 			</div>
 		</div>
@@ -175,8 +175,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</h4>
 			</div>
 			<div id="collapseOne" class="panel-collapse collapse in">
-				<div class="panel-body text-center"><a href="adminlistteacher" target="main">浏览教师</a></div>
-				<div class="panel-body text-center"><a href="adminupdateteacher" target="main">修改教师</a></div>
+				<div class="panel-body text-center"><a href="adminlistteacher" target="main">教师一览</a></div>
 			</div>
 		</div>
 		<!-- 班级管理 -->
@@ -190,21 +189,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div id="collapseTwo" class="panel-collapse collapse">
 				<div class="panel-body text-center"><a href="adminlistclass" target="main">浏览班级</a></div>
-				<div class="panel-body text-center"><a href="adminupdateclass" target="main">修改班级</a></div>
+				<div class="panel-body text-center"><a href="adminliststudent" target="main">浏览学生</a></div>
 			</div>
 		</div>
-		<!-- 学生管理 -->
+		<!-- 课程管理 -->
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">
 					<a data-toggle="collapse" data-parent="#accordion"
-						href="#collapseThree">
-						<span class="glyphicon glyphicon-education"></span> 学生管理</a>
+						href="#collapseThree1">
+						<span class="glyphicon glyphicon-education"></span> 课程管理</a>
 				</h4>
 			</div>
-			<div id="collapseThree" class="panel-collapse collapse">
-				<div class="panel-body text-center"><a href="adminliststudent" target="main">浏览学生</a></div>
-				<div class="panel-body text-center"><a href="adminupdatestudent" target="main">修改班级</a></div>
+			<div id="collapseThree1" class="panel-collapse collapse">
+				<div class="panel-body text-center"><a href="adminlistcourse" target="main">浏览课程</a></div>
 			</div>
 		</div>
 		<!-- 考试安排 -->
@@ -213,10 +211,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<h4 class="panel-title">
 					<a data-toggle="collapse" data-parent="#accordion"
 						href="#collapse4">
-						<span class="glyphicon glyphicon-edit"></span> 考试相关 </a>
+						<span class="glyphicon glyphicon-edit"></span> 考试安排 </a>
 				</h4>
 			</div>
 			<div id="collapse4" class="panel-collapse collapse">
+				<div class="panel-body text-center"><a href="adminlistexam" target="main">管理课程</a></div>
 				<div class="panel-body text-center"><a href="adminlistexam" target="main">考试安排</a></div>
 				<div class="panel-body text-center"><a href="adminupdateexam" target="main">考试管理</a></div>
 			</div>
@@ -231,8 +230,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</h4>
 			</div>
 			<div id="collapse5" class="panel-collapse collapse">
-				<div class="panel-body text-center"><a href="adminlistentrepot" target="main">考试安排</a></div>
-				<div class="panel-body text-center"><a href="adminupdateentrepot" target="main">考试管理</a></div>
+				<div class="panel-body text-center"><a href="atypelist" target="main">考点类型</a></div>
+				<div class="panel-body text-center"><a href="adminupdateentrepot" target="main">试卷管理</a></div>
+				<div class="panel-body text-center"><a href="qtlist" target="main">题库管理</a></div>
 			</div>
 		</div>
 		<!-- 个人相关 -->
@@ -245,7 +245,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</h4>
 			</div>
 			<div id="collapse6" class="panel-collapse collapse">
-				<div class="panel-body text-center"><a href="adminlistself" target="main">查看信息</a></div>
+				<div class="panel-body text-center"><a href="adminlistself" target="main">我的信息</a></div>
 				<div class="panel-body text-center"><a href="adminupdateself" target="main">修改密码</a></div>
 			</div>
 		</div>

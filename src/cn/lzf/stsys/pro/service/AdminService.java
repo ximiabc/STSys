@@ -12,5 +12,5 @@ public interface AdminService extends BaseDao<Admin>{
 	 * @param password
 	 * @return
 	 */
-//	Admin userLogin(String username,String password);
+	Admin Login(String account,String pass);
 }

@@ -10,5 +10,17 @@
         </id>
 		
 		<property name="name" type="string"></property>
+		<!-- 关联多个知识点关键字 -->
+		<set name="knows" inverse="true">
+			<key column="knows_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.Knows"/>
+		</set>
+		<!-- 关联多个试题 -->
+		<set name="lists" inverse="true">
+			<key column="knows_list"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionList"/>
+		</set>
+		<!-- 关联一个课程 -->
+		<many-to-one name="course" class="cn.lzf.stsys.pro.entity.publics.Course" column="course_id"></many-to-one>
     </class>
 </hibernate-mapping>
