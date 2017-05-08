@@ -11,3 +11,10 @@ WebRoot/WEB-INF/classes/cn/lzf/stsys/pro/servlet/PublicServlet.class
 .settings/org.eclipse.wst.common.component
 .settings/org.eclipse.wst.common.component
 .classpath
+WebRoot/WEB-INF/classes/cn/lzf/stsys/util/webListener.class
+*.class
+WebRoot/WEB-INF/classes/cn/lzf/stsys/util/webListener.class
+*.class
+*.class
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.core.resources.prefs
