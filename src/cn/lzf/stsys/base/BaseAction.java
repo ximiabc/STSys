@@ -22,7 +22,6 @@ import cn.lzf.stsys.pro.service.TeacherService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-
 public abstract class BaseAction<T> extends ActionSupport implements ModelDriven<T>{
 	protected T model;
 	public BaseAction(){

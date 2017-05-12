@@ -7,7 +7,7 @@ import cn.lzf.stsys.pro.entity.student.Student;
 public interface StudentService extends BaseDao<Student>{
 
 	/**
-	 * 管理员登录
+	 * 学生登录
 	 * @param username
 	 * @param password
 	 * @return

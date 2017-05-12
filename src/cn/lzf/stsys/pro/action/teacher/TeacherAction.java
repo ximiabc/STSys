@@ -66,4 +66,16 @@ public class TeacherAction extends BaseAction<Teacher>{
 		return "updateentrepot";
 	}
 	
+	//登录
+	public String login(){
+		Teacher teacher=teacherService.Login(getModel().getAccount(), getModel().getPass());
+		if(teacher==null){
+			addFieldError("error", "用户名或密码错误！");
+			return "login";
+		}else{
+			ActionContext.getContext().getSession().put("body", "teacher");
+			ActionContext.getContext().getSession().put("teacher", teacher);
+			return "index";
+		}
+	}
 }

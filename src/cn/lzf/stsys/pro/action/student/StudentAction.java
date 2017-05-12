@@ -4,6 +4,7 @@ import com.opensymphony.xwork2.ActionContext;
 
 import cn.lzf.stsys.base.BaseAction;
 import cn.lzf.stsys.pro.entity.student.Student;
+import cn.lzf.stsys.pro.service.StudentService;
 
 /**
  * 学生
@@ -41,5 +42,17 @@ public class StudentAction extends BaseAction<Student>{
 	public String listhistory() {
 		return "listhistory";
 	}
-	
+
+	//登录
+	public String login(){
+		Student student=studentService.Login(getModel().getAccount(),getModel().getPass());
+		if(student==null){
+			addFieldError("error", "用户名或密码错误！");
+			return "login";
+		}else{
+			ActionContext.getContext().getSession().put("body", "student");
+			ActionContext.getContext().getSession().put("student", student);
+			return "index";
+		}
+	}
 }

@@ -50,7 +50,7 @@ public class AdminAction extends BaseAction<Admin>{
 	public String login() {
 		Admin admin=adminService.Login(getModel().getAccount(), getModel().getPass());
 		if(admin==null){
-			addFieldError("error", "用户或密码错误！");
+			addFieldError("error", "用户名或密码错误！");
 			return "login";
 		}else{
 			ActionContext.getContext().getSession().put("body","admin");

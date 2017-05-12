@@ -9,7 +9,7 @@
 		<action name="student*" class="cn.lzf.stsys.pro.action.student.StudentAction" method="{1}">
 			<!-- 默认页 -->
 			<result name="index">/WEB-INF/view/student/index.jsp</result>
-			
+			<result name="login">/WEB-INF/view/public/index.jsp</result>
 			<!-- 考试安排相关 -->
 			<result name="listexam">/WEB-INF/view/student/exam_list_message.jsp</result>
 			<result name="listhistory">/WEB-INF/view/student/exam_list_history.jsp</result>
