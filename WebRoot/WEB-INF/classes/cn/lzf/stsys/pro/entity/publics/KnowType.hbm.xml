@@ -22,5 +22,32 @@
 		</set>
 		<!-- 关联一个课程 -->
 		<many-to-one name="course" class="cn.lzf.stsys.pro.entity.publics.Course" column="course_id"></many-to-one>
+    	
+    	<!-- 关联多个试题  -->
+		<set name="singles" inverse="true">
+			<key column="singles_list"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionSelectSingle"/>
+		</set>
+		<set name="selects" inverse="true">
+			<key column="selects_list"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionSelects"/>
+		</set>
+		<set name="packs" inverse="true">
+			<key column="packs_list"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionPack"/>
+		</set>
+		<set name="judges" inverse="true">
+			<key column="judges_list"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionJudge"/>
+		</set>
+		<set name="simples" inverse="true">
+			<key column="simples_list"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionSimple"/>
+		</set>
+		<set name="strongs" inverse="true">
+			<key column="strongs_list"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionStrong"/>
+		</set>
+		
     </class>
 </hibernate-mapping>

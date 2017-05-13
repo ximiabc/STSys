@@ -63,5 +63,20 @@
 			<result name="list">/WEB-INF/view/public/questions_list_message.jsp</result>
 		</action>
 		
+		<!-- 单选题 -->
+		<action name="asingle*" class="cn.lzf.stsys.pro.action.publics.SingleAction" method="{1}">
+			<result name="list">/WEB-INF/view/public/question_single_list.jsp</result>
+			<result name="view">/WEB-INF/view/public/question_single_view.jsp</result>
+			<result name="add">/WEB-INF/view/public/question_single_add.jsp</result>
+			<result name="update">/WEB-INF/view/public/question_single_update.jsp</result>
+		</action>
+		<!-- 多选题 -->
+		<action name="aselect*" class="cn.lzf.stsys.pro.action.publics.SelectsAction" method="{1}">
+			<result name="list">/WEB-INF/view/public/question_select_list.jsp</result>
+			<result name="view">/WEB-INF/view/public/question_select_view.jsp</result>
+			<result name="add">/WEB-INF/view/public/question_select_add.jsp</result>
+			<result name="update">/WEB-INF/view/public/question_select_update.jsp</result>
+		</action>
+		
 	</package>
 </struts>

@@ -31,8 +31,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<tr>
 						<td>${indexs.index+1 }</td>
 						<td>
-							<c:if test="${id == 1 }"><a href="">${name }</a></c:if>
-							<c:if test="${id == 2 }"><a href="">${name }</a></c:if>
+							<c:if test="${id == 1 }"><a href="asinglelist">${name }</a></c:if>
+							<c:if test="${id == 2 }"><a href="aselectlist">${name }</a></c:if>
 							<c:if test="${id == 3 }"><a href="">${name }</a></c:if>
 							<c:if test="${id == 4 }"><a href="">${name }</a></c:if>
 							<c:if test="${id == 5 }"><a href="">${name }</a></c:if>

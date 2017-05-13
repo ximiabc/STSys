@@ -24,5 +24,8 @@
         </set>
         <!-- 关联课程 -->
         <many-to-one name="course" class="cn.lzf.stsys.pro.entity.publics.Course" column="simples_id"></many-to-one>
+    	
+    	<!-- 关联类型 -->
+        <many-to-one name="knowType" class="cn.lzf.stsys.pro.entity.publics.KnowType" column="simples_list"></many-to-one>
     </class>
 </hibernate-mapping>

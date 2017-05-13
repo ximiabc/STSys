@@ -14,6 +14,14 @@ public class KnowType {
 	private Course course;
 	private Set<Knows> knows=new HashSet<Knows>();
 	private Set<QuestionList> lists=new HashSet<QuestionList>();
+	
+	private Set<QuestionSelectSingle>singles=new HashSet<QuestionSelectSingle>();
+	private Set<QuestionSelects>selects=new HashSet<QuestionSelects>();
+	private Set<QuestionPack>packs=new HashSet<QuestionPack>();
+	private Set<QuestionJudge>judges=new HashSet<QuestionJudge>();
+	private Set<QuestionSimple>simples=new HashSet<QuestionSimple>();
+	private Set<QuestionStrong>strongs=new HashSet<QuestionStrong>();
+	
 	public KnowType() {
 	}
 
@@ -55,6 +63,54 @@ public class KnowType {
 
 	public void setLists(Set<QuestionList> lists) {
 		this.lists = lists;
+	}
+
+	public Set<QuestionSelectSingle> getSingles() {
+		return singles;
+	}
+
+	public void setSingles(Set<QuestionSelectSingle> singles) {
+		this.singles = singles;
+	}
+
+	public Set<QuestionSelects> getSelects() {
+		return selects;
+	}
+
+	public void setSelects(Set<QuestionSelects> selects) {
+		this.selects = selects;
+	}
+
+	public Set<QuestionPack> getPacks() {
+		return packs;
+	}
+
+	public void setPacks(Set<QuestionPack> packs) {
+		this.packs = packs;
+	}
+
+	public Set<QuestionJudge> getJudges() {
+		return judges;
+	}
+
+	public void setJudges(Set<QuestionJudge> judges) {
+		this.judges = judges;
+	}
+
+	public Set<QuestionSimple> getSimples() {
+		return simples;
+	}
+
+	public void setSimples(Set<QuestionSimple> simples) {
+		this.simples = simples;
+	}
+
+	public Set<QuestionStrong> getStrongs() {
+		return strongs;
+	}
+
+	public void setStrongs(Set<QuestionStrong> strongs) {
+		this.strongs = strongs;
 	}
 	
 }

@@ -8,6 +8,7 @@ package cn.lzf.stsys.pro.entity.publics;
 public abstract class Question {
 	private Integer id;
 	private QuestionType types;//题目所属类型
+	private KnowType knowType;//
 	private Course course;
 	
 	private String title;//标题
@@ -81,6 +82,14 @@ public abstract class Question {
 
 	public void setCourse(Course course) {
 		this.course = course;
+	}
+
+	public KnowType getKnowType() {
+		return knowType;
+	}
+
+	public void setKnowType(KnowType knowType) {
+		this.knowType = knowType;
 	}
 	
 }
