@@ -77,6 +77,33 @@
 			<result name="add">/WEB-INF/view/public/question_select_add.jsp</result>
 			<result name="update">/WEB-INF/view/public/question_select_update.jsp</result>
 		</action>
-		
+		<!-- 填空题 -->
+		<action name="apack*" class="cn.lzf.stsys.pro.action.publics.PackAction" method="{1}">
+			<result name="list">/WEB-INF/view/public/question_pack_list.jsp</result>
+			<result name="view">/WEB-INF/view/public/question_pack_view.jsp</result>
+			<result name="add">/WEB-INF/view/public/question_pack_add.jsp</result>
+			<result name="update">/WEB-INF/view/public/question_pack_update.jsp</result>
+		</action>
+		<!-- 判断题 -->
+		<action name="ajudge*" class="cn.lzf.stsys.pro.action.publics.JudgeAction" method="{1}">
+			<result name="list">/WEB-INF/view/public/question_judge_list.jsp</result>
+			<result name="view">/WEB-INF/view/public/question_judge_view.jsp</result>
+			<result name="add">/WEB-INF/view/public/question_judge_add.jsp</result>
+			<result name="update">/WEB-INF/view/public/question_judge_update.jsp</result>
+		</action>
+		<!-- 简答题 -->
+		<action name="asimple*" class="cn.lzf.stsys.pro.action.publics.SimpleAction" method="{1}">
+			<result name="list">/WEB-INF/view/public/question_simple_list.jsp</result>
+			<result name="view">/WEB-INF/view/public/question_simple_view.jsp</result>
+			<result name="add">/WEB-INF/view/public/question_simple_add.jsp</result>
+			<result name="update">/WEB-INF/view/public/question_simple_update.jsp</result>
+		</action>
+		<!-- 大题 -->
+		<action name="astrong*" class="cn.lzf.stsys.pro.action.publics.StrongAction" method="{1}">
+			<result name="list">/WEB-INF/view/public/question_strong_list.jsp</result>
+			<result name="view">/WEB-INF/view/public/question_strong_view.jsp</result>
+			<result name="add">/WEB-INF/view/public/question_strong_add.jsp</result>
+			<result name="update">/WEB-INF/view/public/question_strong_update.jsp</result>
+		</action>
 	</package>
 </struts>

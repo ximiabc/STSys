@@ -16,7 +16,7 @@
         <property name="scores" type="integer"></property>
         <property name="stars" type="integer"></property>
         <!-- 判断相关 -->
-        <property name="result" type="integer"></property>
+        <property name="result" type="string"></property>
          <!-- 关联多个试题 -->
         <set name="lists">
         	<key column="simple_id"></key>

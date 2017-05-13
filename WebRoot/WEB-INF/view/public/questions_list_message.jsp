@@ -33,10 +33,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<td>
 							<c:if test="${id == 1 }"><a href="asinglelist">${name }</a></c:if>
 							<c:if test="${id == 2 }"><a href="aselectlist">${name }</a></c:if>
-							<c:if test="${id == 3 }"><a href="">${name }</a></c:if>
-							<c:if test="${id == 4 }"><a href="">${name }</a></c:if>
-							<c:if test="${id == 5 }"><a href="">${name }</a></c:if>
-							<c:if test="${id == 6 }"><a href="">${name }</a></c:if>
+							<c:if test="${id == 3 }"><a href="apacklist">${name }</a></c:if>
+							<c:if test="${id == 4 }"><a href="ajudgelist">${name }</a></c:if>
+							<c:if test="${id == 5 }"><a href="asimplelist">${name }</a></c:if>
+							<c:if test="${id == 6 }"><a href="astronglist">${name }</a></c:if>
 						</td>
 						<td>${lists.size() }</td>
 					</tr>

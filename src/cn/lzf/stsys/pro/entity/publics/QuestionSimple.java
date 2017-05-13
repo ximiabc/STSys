@@ -9,16 +9,16 @@ import java.util.Set;
  *
  */
 public class QuestionSimple extends Question{
-	private Integer result;
+	private String result;
 	private Set<QuestionList>lists=new HashSet<QuestionList>();
 	
 	public QuestionSimple() {
 	}
 	
-	public Integer getResult() {
+	public String getResult() {
 		return result;
 	}
-	public void setResult(Integer result) {
+	public void setResult(String result) {
 		this.result = result;
 	}
 

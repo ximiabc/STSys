@@ -17,7 +17,7 @@
         <property name="stars" type="integer"></property>
         <!-- 填空相关 -->
         <property name="itemSize"></property>
-        <property name="result" type="integer"></property>
+        <property name="result" type="string"></property>
          <!-- 关联多个试题 -->
         <set name="lists">
         	<key column="pack_id"></key>

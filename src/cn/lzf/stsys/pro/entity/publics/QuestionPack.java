@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class QuestionPack extends Question{
 	private Integer itemSize; 
-	private Integer result;
+	private String result;
 	private Set<QuestionList>lists=new HashSet<QuestionList>();
 	
 	public QuestionPack() {
@@ -24,10 +24,10 @@ public class QuestionPack extends Question{
 		this.itemSize = itemSize;
 	}
 
-	public Integer getResult() {
+	public String getResult() {
 		return result;
 	}
-	public void setResult(Integer result) {
+	public void setResult(String result) {
 		this.result = result;
 	}
 
