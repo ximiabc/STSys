@@ -45,6 +45,13 @@
 			<result name="updateentrepot">/WEB-INF/view/admin/entrepot_update_message.jsp</result>
 		</action>
 		
+		<!-- 试卷管理 -->
+		<action name="apaper*" class="cn.lzf.stsys.pro.action.publics.PaperAction" method="{1}">
+			<result name="add">/WEB-INF/view/public/paper_add.jsp</result>
+			<result name="list">/WEB-INF/view/public/paper_list.jsp</result>
+			<result name="update">/WEB-INF/view/public/paper_update.jsp</result>
+		</action>
+		
 		<!-- 题库相关 ============-->
 		<!-- 关键字 -->
 		<action name="aknow*" class="cn.lzf.stsys.pro.action.publics.KnowAction" method="{1}">
@@ -104,6 +111,16 @@
 			<result name="view">/WEB-INF/view/public/question_strong_view.jsp</result>
 			<result name="add">/WEB-INF/view/public/question_strong_add.jsp</result>
 			<result name="update">/WEB-INF/view/public/question_strong_update.jsp</result>
+		</action>
+	</package>
+	
+	<package name="filter"  extends="json-default" namespace="/">
+		<action name="asyn*" class="cn.lzf.stsys.pro.action.publics.CourseAction" method="{1}">
+			<!-- 课程知识点类型-->
+			<result name="types" type="json">
+                <param name="root">result</param>
+            </result>
+            
 		</action>
 	</package>
 </struts>

@@ -28,16 +28,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			<table>
   				<tbody>
   					<tr><td>（所属课程：
-  						<select name="course_id">
+  						<select name="course_id" onchange="asyn(this.options[this.options.selectedIndex].value)">
 							<s:iterator value="courseBean">
 								<option value="${id }" <c:if test='${bean.course.id == id }'>selected="selected"</c:if>>${name }</option>
 							</s:iterator>
 						</select>
 						，考点：
-						<select name="knowType_id">
-							<s:iterator value="courseBean">
-								<option value="${id }" <c:if test='${bean.knowType.id == id }'>selected="selected"</c:if>>${name }</option>
-							</s:iterator>
+						<select id="s1" name="knowType_id">
+								<option>----</option>
 						</select>
 						）</td>
 					</tr>
@@ -105,5 +103,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			</table>
   		</form>
   	</div>
+  	
+  	<script type="text/javascript">
+  		var obj;
+  		//异步加载数据
+		function asyn(id){
+			$.ajax({
+                    type : "post",
+                    url : "${pageContext.request.contextPath}/asyntype?id="+id,
+                    data : {//发出的数据//userName : userName
+                    },
+                    dataType:"json",
+                    success : function(data) {
+                    	obj = $.parseJSON(data);
+                    	
+                    	var oSelect = document.getElementById("s1");//获取标签  
+                    	if(obj.code==1){
+                    		for (var i = oSelect.options.length-1; i>=0; i--){
+						        oSelect.options.remove(i);
+						    }
+                    		if(obj.result.length!=0){
+	                    		for(var i=0;i<obj.result.length;i++){
+	                    			var oOption = document.createElement("option");//js中创建select标签下的OPTION子标签  
+	                    			oOption.value = obj.result[i].id;//内容对应的value值  
+									oOption.innerHTML =obj.result[i].name;
+									oSelect.options[i]=oOption;//将新建的OPTION子标签添加到select标签下
+									//$('#s1').options.add(new Option(obj.result[i].name,obj.result[i].id));
+	                    		}
+                    		}
+                    	}else{
+                    		for (var i = oSelect.options.length-1; i>=0; i--){
+						        oSelect.options.remove(i);
+						    }
+                    		var oOption = document.createElement("option");//js中创建select标签下的OPTION子标签  
+							oOption.innerHTML ="----";
+							oSelect.options[0]=oOption;//将新建的OPTION子标签添加到select标签下
+                    	}
+                    },
+                    error : function() {
+                        console.log("异步请求失败！");
+                    }
+                });
+		};
+  	</script>
   </body>
 </html>

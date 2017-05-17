@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<form action="" method="post">
   			<table>
   				<tbody>
-  					<tr><td>${bean.title }（课程：${bean.course.name }，考点：${knowType.name }）</td></tr>
+  					<tr><td>${bean.title }（课程：${bean.course.name }，考点：${bean.knowType.name }）</td></tr>
   					<tr><td colspan="2">${bean.context }（${bean.scoreMax }分，推荐度：${bean.stars }）</td></tr>
   					<tr><td colspan="2">A：${bean.itemA }</td></tr>
   					<tr><td colspan="2">B：${bean.itemB }</td></tr>

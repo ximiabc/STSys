@@ -11,6 +11,7 @@ import cn.lzf.stsys.pro.service.JudgeService;
 import cn.lzf.stsys.pro.service.KnowService;
 import cn.lzf.stsys.pro.service.KnowTypeService;
 import cn.lzf.stsys.pro.service.PacksService;
+import cn.lzf.stsys.pro.service.PaperService;
 import cn.lzf.stsys.pro.service.QuestionTypeService;
 import cn.lzf.stsys.pro.service.SelectSingleService;
 import cn.lzf.stsys.pro.service.SelectsService;
@@ -65,6 +66,10 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
 	protected KnowService knowService;
 	@Resource
 	protected KnowTypeService knowTypeService;
+	
+	//试卷
+	@Resource
+	protected PaperService paperService;
 	
 	
 	@Resource

@@ -231,7 +231,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div id="collapse5" class="panel-collapse collapse">
 				<div class="panel-body text-center"><a href="atypelist" target="main">考点类型</a></div>
-				<div class="panel-body text-center"><a href="adminupdateentrepot" target="main">试卷管理</a></div>
+				<div class="panel-body text-center"><a href="apaperlist" target="main">试卷管理</a></div>
 				<div class="panel-body text-center"><a href="qtlist" target="main">题库管理</a></div>
 			</div>
 		</div>
