@@ -3,17 +3,30 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
-    
-    <title>更新班级信息</title>
-    
+    <title>添加班级信息</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/bootstrap/css/bootstrap.min.css" type="text/css"></link>
+	<script type="text/javascript" src="${pageContext.request.contextPath }/bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath }/bootstrap/js/bootstrap.min.js"></script>
   </head>
-  
   <body>
-    This is my JSP page. <br>
+    <div class="text-center" style="padding-left: 50px;">
+  		<form action="teacheraddclasss" method="post">
+  			<table>
+  				<thead><tr><th>添加班级</th></tr></thead>
+  				<tbody>
+  					<tr><td>班级</td><td><input name="name" value="${body.name }"> </td></tr>
+  					<tr><td>描述</td><td><input name="info" value="${body.info }"></td></tr>
+  				</tbody>
+  				<tfoot>
+  					<tr><td><input type="submit" value="立即添加" class="btn btn-primary"> </td></tr>
+  					<tr><td><s:actionmessage/> </td> </tr>
+  				</tfoot>
+  			</table>
+  		</form>
+  	</div>
   </body>
 </html>

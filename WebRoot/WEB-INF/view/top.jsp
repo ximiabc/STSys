@@ -31,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <h1>考试系统</h1>
+    <h1>欢迎使用考试系统！</h1>
     <div class="title-item">
     	<a>
     	<s:if test="#session.body == 'student'">
