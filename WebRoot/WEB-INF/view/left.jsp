@@ -100,7 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div id="collapseTwo" class="panel-collapse collapse in">
 				<div class="panel-body text-center"><a href="teacherlistclass" target="main">浏览班级</a></div>
-				<div class="panel-body text-center"><a href="teacherupdateclass" target="main">修改班级</a></div>
+				<!-- <div class="panel-body text-center"><a href="teacherupdateclass" target="main">修改班级</a></div> -->
 			</div>
 		</div>
 		<!-- 学生管理 -->
@@ -114,7 +114,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<div id="collapseThree" class="panel-collapse collapse">
 				<div class="panel-body text-center"><a href="teacherliststudent" target="main">浏览学生</a></div>
-				<div class="panel-body text-center"><a href="teacherupdatestudent" target="main">修改班级</a></div>
+				<!-- <div class="panel-body text-center"><a href="teacherupdatestudent" target="main">修改班级</a></div> -->
 			</div>
 		</div>
 		<!-- 考试安排 -->
