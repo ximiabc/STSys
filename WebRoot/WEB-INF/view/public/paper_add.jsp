@@ -29,7 +29,7 @@
 		class="glyphicon glyphicon-menu-left"></span> </a>
 	<h3>添加试卷</h3>
 	<div class="text-center" style="padding-left: 50px;">
-		<form action="asingleadds" method="post">
+		<form action="apaperadds" method="post">
 			<table>
 				<tbody>
 					<tr>

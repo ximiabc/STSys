@@ -50,6 +50,16 @@
 			<result name="add">/WEB-INF/view/public/paper_add.jsp</result>
 			<result name="list">/WEB-INF/view/public/paper_list.jsp</result>
 			<result name="update">/WEB-INF/view/public/paper_update.jsp</result>
+			<result name="view">/WEB-INF/view/public/paper_view.jsp</result>
+			<result name="viewall">/WEB-INF/view/public/paper_view_all.jsp</result>
+		</action>
+		<!-- 试题管理 -->
+		<action name="aquestion*" class="cn.lzf.stsys.pro.action.publics.QuestionAction" method="{1}">
+			<result name="add">/WEB-INF/view/public/paper_question_add.jsp</result>
+			<result name="list">/WEB-INF/view/public/paper_question_list.jsp</result>
+			<result name="lists">/WEB-INF/view/public/paper_question_list_single.jsp</result>
+			<result name="update">/WEB-INF/view/public/paper_question_update.jsp</result>
+			<result name="view">/WEB-INF/view/public/paper_question_view.jsp</result>
 		</action>
 		
 		<!-- 题库相关 ============-->
@@ -120,7 +130,6 @@
 			<result name="types" type="json">
                 <param name="root">result</param>
             </result>
-            
 		</action>
 	</package>
 </struts>

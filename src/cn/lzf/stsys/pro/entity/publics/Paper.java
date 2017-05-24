@@ -6,7 +6,6 @@ import java.util.Set;
 /**
  * 试卷
  * @author 李志飞
- *
  */
 public class Paper {
 	private Integer id;

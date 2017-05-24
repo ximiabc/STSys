@@ -1,13 +1,11 @@
 package cn.lzf.stsys.pro.entity.publics;
 
-import java.util.Set;
-
 /**
  * 试卷-试题表
  * @author 李志飞
  *
  */
-public abstract class QuestionList {
+public class QuestionList {
 	private Integer id;
 	private Paper paper;//所属试卷
 	private QuestionType types;//题目所属类型：1单选、2多选、3填空、4判断、5简答、6大题

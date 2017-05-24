@@ -12,6 +12,7 @@ import cn.lzf.stsys.pro.service.KnowService;
 import cn.lzf.stsys.pro.service.KnowTypeService;
 import cn.lzf.stsys.pro.service.PacksService;
 import cn.lzf.stsys.pro.service.PaperService;
+import cn.lzf.stsys.pro.service.QuestionService;
 import cn.lzf.stsys.pro.service.QuestionTypeService;
 import cn.lzf.stsys.pro.service.SelectSingleService;
 import cn.lzf.stsys.pro.service.SelectsService;
@@ -70,6 +71,8 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
 	//试卷
 	@Resource
 	protected PaperService paperService;
+	@Resource
+	protected QuestionService questionListService;
 	
 	
 	@Resource

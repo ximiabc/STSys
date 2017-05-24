@@ -1,5 +1,7 @@
 package cn.lzf.stsys.pro.service;
 
+import java.util.List;
+
 import cn.lzf.stsys.base.BaseDao;
 import cn.lzf.stsys.pro.entity.publics.KnowType;
 
@@ -9,5 +11,7 @@ import cn.lzf.stsys.pro.entity.publics.KnowType;
  *
  */
 public interface KnowTypeService extends BaseDao<KnowType>{
-
+	
+	List<KnowType> getByCourse(Integer id);
+	
 }

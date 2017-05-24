@@ -24,22 +24,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </a>
     <h3>添加单项选择题</h3>
   	<div class="text-center" style="padding-left: 50px;">
-  		<form action="apaperupdates?id=${bean.id }" method="post">
+  		<form action="aquestionlist?id=${bean.id }" method="post">
   			<table>
   				<tbody>
-  					<tr><td>（所属课程：
-  						<select name="course_id">
-							<s:iterator value="courseBean">
-								<option value="${id }" <c:if test='${bean.course.id == id }'>selected="selected"</c:if>>${name }</option>
-							</s:iterator>
-						</select>
-						）</td>
-					</tr>
-  					<tr><td>试卷名：<input name="name"  type="text" value="${bean.name }"></td></tr>
-  					<tr><td>描述：<input name="info"  type="text" value="${bean.info }"></td></tr>
+					<tr><td>课程：${bean.course.name }</tr>
+  					<tr><td>试卷名：${bean.name }</tr>
+  					<tr><td>描述：${bean.info }</tr>
+  					<tr><td>试题数量：${bean.questions.size() }</td></tr>
   				</tbody>
   				<tfoot>
-  					<tr><td><input type="submit" value="立即修改" class="btn btn-primary"> </td></tr>
+  					<tr><td><input type="submit" value="试题管理" class="btn btn-primary"><a href="apaperviewall?id=${bean.id }" class="btn btn-primary">浏览试卷</a> </td></tr>
   					<tr><td><s:actionmessage/> </td> </tr>
   				</tfoot>
   			</table>
