@@ -155,7 +155,6 @@ public class PaperAction extends BaseAction<Paper>{
 		list();
 		return "list";
 	}
-	
 	private void geCourse() {
 		List<Course> courses=courseService.findAll();
 		ValueStack vs=ActionContext.getContext().getValueStack();

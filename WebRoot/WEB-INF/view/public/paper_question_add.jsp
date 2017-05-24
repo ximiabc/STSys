@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </a>
     <h3>添加单项选择题</h3>
   	<div class="text-center" style="padding-left: 50px;">
-  		<form action="aquestionadds?paper_id=${paper.id }&type=1" method="post">
+  		<form action="aquestionadds?paper_id=${paper.id }&type=${type }" method="post">
   			<table>
   				<tbody>
   					<tr><td>

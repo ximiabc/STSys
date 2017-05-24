@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>添加单选题</title>
+    <title>试题预览</title>
     
     <link rel="stylesheet" href="${pageContext.request.contextPath }/bootstrap/css/bootstrap.min.css" type="text/css"></link>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/bootstrap/js/jquery.min.js"></script>
@@ -22,18 +22,61 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<a onclick="history.go(-1)" class="btn btn-default">
     	<span class="glyphicon glyphicon-menu-left"></span>
     </a>
-    <h3>添加单项选择题</h3>
+    <h3>试题预览</h3>
   	<div class="text-center" style="padding-left: 50px;">
   		<form action="aquestionlist?id=${bean.id }" method="post">
   			<table>
   				<tbody>
-					<tr><td>课程：${bean.course.name }</tr>
-  					<tr><td>试卷名：${bean.name }</tr>
-  					<tr><td>描述：${bean.info }</tr>
-  					<tr><td>试题数量：${bean.questions.size() }</td></tr>
+  					<tr><th>${paper.name }</th></tr>
+  					<tr><th>${paper.info }</th></tr>
+  					<c:if test="${singles.size() != 0 }">
+  					<tr><th>单选题</th></tr>
+  						<s:iterator value="singles" status="indexs">
+  							<tr><th>( ${indexs.index+1 } )[${title }] ${context }(${result })</th></tr>
+  							<tr><td>A:${itemA }</td></tr>
+  							<tr><td>B:${itemB }</td></tr>
+  							<tr><td>C:${itemC }</td></tr>
+  							<tr><td>D:${itemD }</td></tr>
+  						</s:iterator>
+  					</c:if>
+  					<c:if test="${selects.size() != 0 }">
+  					<tr><th><br>多选题</th></tr>
+  						<s:iterator value="selects" status="indexs">
+  							<tr><th>( ${indexs.index+1 } )[${title }] ${context }(${result })</th></tr>
+  							<tr><td>A:${itemA }</td></tr>
+  							<tr><td>B:${itemB }</td></tr>
+  							<tr><td>C:${itemC }</td></tr>
+  							<tr><td>D:${itemD }</td></tr>
+  						</s:iterator>
+  					</c:if>
+  					<c:if test="${packs.size() != 0 }">
+  					<tr><th><br>填空题</th></tr>
+  						<s:iterator value="packs" status="indexs">
+  							<tr><th>( ${indexs.index+1 } )[${title }] ${context }</th></tr>
+  						</s:iterator>
+  					</c:if>
+  					<c:if test="${judges.size() != 0 }">
+  					<tr><th><br>判断题</th></tr>
+  						<s:iterator value="judges" status="indexs">
+  							<tr><th>( ${indexs.index+1 } )[${title }] ${context }</th></tr>
+  						</s:iterator>
+  					</c:if>
+  					<c:if test="${simples.size() != 0 }">
+  					<tr><th><br>简答题</th></tr>
+  						<s:iterator value="simples" status="indexs">
+  							<tr><th>( ${indexs.index+1 } )[${title }] ${context }</th></tr>
+  						</s:iterator>
+  					</c:if>
+  					<c:if test="${strongs.size() != 0 }">
+  					<tr><th><br>解答题</th></tr>
+  						<s:iterator value="strongs" status="indexs">
+  							<tr><th>( ${indexs.index+1 } )[${title }] ${context }</th></tr>
+  						</s:iterator>
+  					</c:if>
   				</tbody>
   				<tfoot>
-  					<tr><td><input type="submit" value="试题管理" class="btn btn-primary"><a href="" class="btn btn-primary">浏览试卷</a> </td></tr>
+  					<tr><td><input type="submit" value="试题管理" class="btn btn-primary">
+  					</td></tr>
   					<tr><td><s:actionmessage/> </td> </tr>
   				</tfoot>
   			</table>

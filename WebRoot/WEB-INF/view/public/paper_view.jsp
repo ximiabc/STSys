@@ -33,7 +33,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   					<tr><td>试题数量：${bean.questions.size() }</td></tr>
   				</tbody>
   				<tfoot>
-  					<tr><td><input type="submit" value="试题管理" class="btn btn-primary"><a href="apaperviewall?id=${bean.id }" class="btn btn-primary">浏览试卷</a> </td></tr>
+  					<tr><td><input type="submit" value="试题管理" class="btn btn-primary">
+  					<a href="apaperviewall?id=${bean.id }" class="btn btn-primary">浏览试卷</a> </td></tr>
   					<tr><td><s:actionmessage/> </td> </tr>
   				</tfoot>
   			</table>

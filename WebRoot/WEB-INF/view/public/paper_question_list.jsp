@@ -18,6 +18,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+  	<a onclick="history.go(-1)" class="btn btn-default">
+    	<span class="glyphicon glyphicon-menu-left"></span>
+    </a>
 		<table class="table table-bordered table-header text-center">
 			<thead><!-- 表头 -->
 				<tr class="bolder">
