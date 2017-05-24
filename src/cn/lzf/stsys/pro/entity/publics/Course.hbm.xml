@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.lzf.stsys.pro.entity.publics.Course" table="sts_course">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+		
+		<property name="name" type="string"></property>
+		<!-- 关联多个知识点类型 -->
+		<set name="knowTypes" inverse="true">
+			<key column="course_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.KnowType"/>
+		</set>
+		<!-- 关联多个试卷 -->
+		<set name="papers" inverse="true">
+			<key column="paper_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.Paper"/>
+		</set>
+		<!-- 关联多个班级 -->
+		<set name="classes" table="t_course_classes" cascade="save-update" inverse="true">
+			<key column="course_id"></key>
+			<many-to-many class="cn.lzf.stsys.pro.entity.publics.Classes" column="classes_id"></many-to-many>
+		</set>
+		
+		<!-- 关联试题 -->
+		<!-- 单选 -->
+		<set name="selectSingles" inverse="true">
+			<key column="single_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionSelectSingle"/>
+		</set>
+		<!-- 多选 -->
+		<set name="selects" inverse="true">
+			<key column="select_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionSelects"/>
+		</set>
+		<!-- 填空 -->
+		<set name="packs" inverse="true">
+			<key column="packs_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionPack"/>
+		</set>
+		<!-- 判断 -->
+		<set name="judges" inverse="true">
+			<key column="judge_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionJudge"/>
+		</set>
+		<!-- 简答 -->
+		<set name="simples" inverse="true">
+			<key column="simples_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionSimple"/>		
+		</set>
+		<!-- 大题 -->
+		<set name="strongs" inverse="true">
+			<key column="strongs_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionStrong"/>
+		</set>
+    </class>
+</hibernate-mapping>

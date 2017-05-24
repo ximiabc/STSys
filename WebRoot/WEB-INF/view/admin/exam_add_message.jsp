@@ -8,12 +8,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    
     <title>更新班级信息</title>
-    
   </head>
-  
   <body>
-    This is my JSP page. <br>
+    
   </body>
 </html>

@@ -8,7 +8,7 @@
 	<package name="teacher" extends="struts-default" namespace="/">
 		<action name="teacher*" class="cn.lzf.stsys.pro.action.teacher.TeacherAction" method="{1}">
 			<result name="index">/WEB-INF/view/teacher/index.jsp</result>
-			
+			<result name="login">/WEB-INF/view/public/index.jsp</result>
 			<!-- 个人相关 -->
 			<result name="listself">/WEB-INF/view/teacher/self_list_message.jsp</result>
 			<result name="updateself">/WEB-INF/view/teacher/self_update_message.jsp</result>

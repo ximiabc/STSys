@@ -13,5 +13,17 @@
         <property name="account" type="string"></property>
         <property name="pass" type="string"></property>
         <property name="date" type="date"></property>
+        <!-- 关联一个班级 -->
+        <many-to-one name="classes" class="cn.lzf.stsys.pro.entity.publics.Classes" column="classes_student_id"></many-to-one>
+        <!-- 关联多个成绩 -->
+        <set name="scores" inverse="true">
+			<key column="score_student_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.Scores"/>
+		</set>
+		<!-- 关联多个回答 -->
+        <set name="answers" inverse="true">
+			<key column="answer_student_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.Answers"/>
+		</set>
     </class>
 </hibernate-mapping>

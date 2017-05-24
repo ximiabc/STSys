@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.lzf.stsys.pro.entity.publics.QuestionStrong" table="sts_q_strong">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+	
+		<property name="title" type="string"></property>
+        <property name="context" type="string"></property>
+        <many-to-one name="types" cascade="all"></many-to-one>
+        <property name="scoreMax" type="integer"></property>
+        <property name="scores" type="integer"></property>
+        <property name="stars" type="integer"></property>
+        <!-- 大题相关 -->
+        <property name="result" type="string"></property>
+         <!-- 关联多个试题 -->
+        <set name="lists">
+        	<key column="strong_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionList"/>
+        </set>
+        <!-- 关联课程 -->
+        <many-to-one name="course" class="cn.lzf.stsys.pro.entity.publics.Course" column="strongs_id"></many-to-one>
+    	
+    	<!-- 关联类型 -->
+        <many-to-one name="knowType" class="cn.lzf.stsys.pro.entity.publics.KnowType" column="strongs_list"></many-to-one>
+    </class>
+</hibernate-mapping>

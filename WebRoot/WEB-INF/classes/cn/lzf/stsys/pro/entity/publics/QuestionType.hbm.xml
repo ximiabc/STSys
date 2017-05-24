@@ -10,5 +10,15 @@
         </id>
 		
 		<property name="name" type="string"></property>
+		<!-- 关联多个试题 -->
+		<set name="lists" inverse="true">
+			<key column="list_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionList"/>
+		</set>
+		<!-- 关联多个回答 -->
+		<set name="answers" inverse="true">
+			<key column="answer_type_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.Answers"/>
+		</set>
     </class>
 </hibernate-mapping>

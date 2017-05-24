@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.lzf.stsys.pro.entity.publics.Paper" table="sts_paper">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+		<property name="name" type="string"></property>
+		<property name="info" type="string"></property>
+		<!-- 关联一个课程 -->
+		<many-to-one name="course" class="cn.lzf.stsys.pro.entity.publics.Course" column="paper_id"></many-to-one>
+		<!-- 关联多个试题 -->
+		<set name="questions" inverse="true">
+			<key column="questions_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionList"/>
+		</set>
+		<!-- 关联多个成绩 -->
+		<set name="scores" inverse="true">
+			<key column="score_paper_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.Scores"/>
+		</set>
+		<!-- 关联多个回答 -->
+		<set name="answers" inverse="true">
+			<key column="answer_paper_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.Answers"/>
+		</set>
+    </class>
+</hibernate-mapping>

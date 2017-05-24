@@ -1,5 +1,8 @@
 package cn.lzf.stsys.pro.entity.publics;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 单选题
  * @author 李志飞
@@ -11,6 +14,8 @@ public class QuestionSelectSingle extends Question{
 	private String itemC;
 	private String itemD;
 	private Integer result;
+	
+	private Set<QuestionList>lists=new HashSet<QuestionList>();
 	
 	public QuestionSelectSingle() {
 	}
@@ -45,4 +50,13 @@ public class QuestionSelectSingle extends Question{
 	public void setResult(Integer result) {
 		this.result = result;
 	}
+
+	public Set<QuestionList> getLists() {
+		return lists;
+	}
+
+	public void setLists(Set<QuestionList> lists) {
+		this.lists = lists;
+	}
+	
 }

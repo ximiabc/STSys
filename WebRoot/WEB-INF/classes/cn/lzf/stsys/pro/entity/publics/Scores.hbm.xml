@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.lzf.stsys.pro.entity.publics.Scores" table="sts_scores">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+		<!-- 关联一个成绩 -->
+		<many-to-one name="student" class="cn.lzf.stsys.pro.entity.student.Student" column="score_student_id"></many-to-one>
+    	<!-- 关联一个试卷 -->
+    	<many-to-one name="paper" class="cn.lzf.stsys.pro.entity.publics.Paper" column="score_paper_id"></many-to-one>
+    </class>
+</hibernate-mapping>

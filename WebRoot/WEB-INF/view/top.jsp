@@ -31,17 +31,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <h1>考试系统</h1>
+    <h1>欢迎使用考试系统！</h1>
     <div class="title-item">
     	<a>
     	<s:if test="#session.body == 'student'">
-    		学生 :${body }
+    		学生 :${student.name }
     	</s:if>
     	<s:elseif test="#session.body == 'teacher'">
-    		老师 :${body }
+    		老师 :${teacher.name }
     	</s:elseif>
     	<s:elseif test="#session.body == 'admin'">
-    		管理员 :${body }
+    		管理员 :${admin.name }
     	</s:elseif>
     	，您好！</a><br>
     	<a href="viewexit" target="_parent">退出登录</a>

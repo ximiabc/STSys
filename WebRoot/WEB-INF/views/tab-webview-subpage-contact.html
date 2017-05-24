@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,body {
+				background-color: #efeff4;
+			}
+			.title{
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 id="title" class="mui-title">教师系统</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a id="defaultTab" class="mui-tab-item" href="teachermain.html">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="tab-webview-subpage-chat.html">
+				<span class="mui-icon mui-icon-checkbox"></span>
+				<span class="mui-tab-label">题库管理</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="tab-webview-subpage-contact.html">
+				<span class="mui-icon mui-icon-circle"></span>
+				<span class="mui-tab-label">组织试卷</span>
+			</a>
+			<a class="mui-tab-item" href="tab-webview-subpage-setting.html">
+				<span class="mui-icon mui-icon-circle"></span>
+				<span class="mui-tab-label">组织考试</span>
+			</a>
+		</nav>
+		<center align="left">
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div class="title">
+					对题库的管理
+				</div>
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell"><a href="selecttest.html" class="mui-navigate-right">选择试题</a>
+					</li>
+					<li class="mui-table-view-cell"><a href="uptestjuan.html" class="mui-navigate-right">更新试卷试题</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</center>
+	</body>
+</html>

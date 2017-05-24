@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.lzf.stsys.pro.entity.publics.Classes" table="sts_classes">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+		
+		<property name="name" type="string"></property>
+		<property name="info" type="string"></property>
+		<property name="date" type="date"></property>
+		<!-- 关联多个课程 -->
+		<set name="courses" table="t_course_classes" cascade="save-update">
+			<key column="classes_id"></key>
+			<many-to-many class="cn.lzf.stsys.pro.entity.publics.Course" column="course_id"></many-to-many>
+		</set>
+		<set name="students" inverse="true">
+			<key column="classes_student_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.student.Student" />
+		</set>
+    </class>
+</hibernate-mapping>

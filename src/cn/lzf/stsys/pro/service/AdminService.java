@@ -1,8 +1,6 @@
 package cn.lzf.stsys.pro.service;
-
 import cn.lzf.stsys.base.BaseDao;
 import cn.lzf.stsys.pro.entity.admin.Admin;
-
 
 public interface AdminService extends BaseDao<Admin>{
 
@@ -12,5 +10,5 @@ public interface AdminService extends BaseDao<Admin>{
 	 * @param password
 	 * @return
 	 */
-//	Admin userLogin(String username,String password);
+	Admin Login(String account,String pass);
 }

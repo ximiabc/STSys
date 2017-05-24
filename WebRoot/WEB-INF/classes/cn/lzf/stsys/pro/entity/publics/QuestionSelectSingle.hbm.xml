@@ -14,11 +14,23 @@
         <many-to-one name="types" cascade="all"></many-to-one>
         <property name="scoreMax" type="integer"></property>
         <property name="scores" type="integer"></property>
+        <property name="stars" type="integer"></property>
         <!-- 单选相关 -->
         <property name="itemA" type="string"></property>
         <property name="itemB" type="string"></property>
         <property name="itemC" type="string"></property>
         <property name="itemD" type="string"></property>
         <property name="result" type="integer"></property>
+        <!-- 关联多个试题 -->
+        <set name="lists">
+        	<key column="single_id"></key>
+			<one-to-many class="cn.lzf.stsys.pro.entity.publics.QuestionList"/>
+        </set>
+        
+        <!-- 关联课程 -->
+        <many-to-one name="course" class="cn.lzf.stsys.pro.entity.publics.Course" column="single_id"></many-to-one>
+        
+        <!-- 关联类型 -->
+        <many-to-one name="knowType" class="cn.lzf.stsys.pro.entity.publics.KnowType" column="singles_list"></many-to-one>
     </class>
 </hibernate-mapping>
